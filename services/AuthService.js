@@ -24,7 +24,7 @@ class AuthService {
 
   login(user) {
     return axios
-      .post('http://127.0.0.1:3000/api/auth', user)
+      .post('/api/auth', user)
       .then(res => {
         if (res.status === 200) {
           this.auth(res.data.user, res.data.token, user.password);
